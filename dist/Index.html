@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+  <link href="Style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-fluid d-flex flex-column min-vh-100 p-0">
+    <!-- Should be navbar of whole editor app including the pattern editor-->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md border-bottom">
+      <div class="container-fluid fill-height">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm border-bottom shadow-sm">
+      <span>Hello 2</span>
+    </nav>
+
+
+    <div class="row max-vh-50">
+      <div class="col bg-light d-flex flex-column">
+        <div class="row flex-grow-1">
+          <div class="col">
+
+          </div>
+          <div class="col p-0 border-start">
+            <div>
+              <div class="d-flex justify-content-center align-items-center border-bottom">
+                <h4 class="p-1 fw-semibold">Timeline</h4>
+              </div>
+              <div class="list-group list-group-flush scrollarea overflow-scroll" id="TimeLine" style="max-height: 500px;">
+   
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center checkers border border-secondary">
+        <canvas id="canvas" width="500" height="500" class="shadow-sm m-2 bg-body rounded"></canvas>
+      </div>
+
+      <div class="col bg-light">
+        <div class="row">
+          <div class="col">
+            <input class="form-range" type="range" min="5" max="30" value="5" id="GridSizeSlider">
+          </div>
+          <div class="col p-2 bg-code">
+            <code class="bg-code rounded p-2 overflow-auto" id="JsonPreview"></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row flex-grow-1">
+      <div class="col border-top"><span>kaas</span></div>
+    </div>
+
+    <div class="row">
+      <div class="col bg-dark h-25">
+        <span id="console" class="text-white-50">Testing</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <div class="bg-gray-800 w-full h-[40px] p-2">
+        <a class="rounded-md bg-sky-800 hover:bg-gray-800 hover:cursor-pointer text-gray-300 h-full p-[4px] m-2">File</a>
+    </div>
+
+    <div class="bg-gray-600 w-full h-[20px] p-2">
+
+    </div>
+
+    <div class="flex flex-row">
+        <div class="bg-sky-800 w-1/4 p-1 border-slate-700 flex flex-row">
+            <div class="basis-1/4 m-3 bg-slate-800">
+                <select>
+                    <option value="circle">Circle</option>
+                    <option value="rect">Rectangle</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <canvas id="canvas" width="500" height="500" class=" col"></canvas>
+        </div>
+        <div class="bg-sky-800 w-full p-1 flex flex-row">
+                <div class="basis-full m-3 bg-gray-600 rounded-md">
+                    <div class=""></div>
+                </div>
+                <div class="basis-full m-3 bg-gray-600 rounded-md">
+                    <span id="JsonPreview" class="text-gray-300 p-3"></span>
+                </div>
+        </div>
+    </div>
+
+    
+
+    <div class="bg-slate-800 fixed bottom-0 w-full h-[50px]">
+        <span id="console" class="text-m font-bold text-lime-500 p-10">Testing</span>
+    </div> -->
+
+  <script src="../out.js"></script>
+</body>
+
+</html>
