@@ -18,6 +18,8 @@ class Level {
 
   GameEvent? OnActionAdd;
 
+  int MapLength = 10;
+
   Level() {
     JsonPreview = querySelector("#JsonPreview");
   }

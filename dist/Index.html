@@ -10,7 +10,8 @@
     crossorigin="anonymous"></script>
 
   <link href="Style.css" rel="stylesheet">
-
+  <link href="img/sprite/famfamfam-silk.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -56,25 +57,88 @@
         </div>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-sm border-bottom shadow-sm">
-      <span>Hello 2</span>
-    </nav>
+    <div class="nav-scroller border-bottom shadow-sm text-decoration-none">
+      <div class="row">
+        <div class="col">
+          <nav class="nav nav-underline">
+            <a class="nav-link" aria-current="page" href="#">Preferences</a>
+            <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button"
+              data-bs-toggle="dropdown">Settings</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#MapSettings">Map
+                  Settings</a></li>
+          </nav>
+        </div>
+        <div class="col-2 d-flex align-items-center">
+          <button type="button" class="btn btn-success mx-2 px-1 py-0" id="ToggleGrid"><i
+              class="bi bi-grid-3x3 p-0"></i></button>
+          <input class="form-range" type="range" min="5" max="30" value="5" id="GridSizeSlider">
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Setting Modals -->
+    <div class="modal modal-lg" id="MapSettings" tabindex="-1" aria-labelledby="MapSettingsLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="MapSettingsLabel">Map Settings</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" area-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                    <span>Map Length</span>
+                  </div>
+                  <div class="col">
+                    <input class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-10"></div>
+                <div class="col">
+                  <button class="btn btn-success" type="submit">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Setting Modals-->
 
 
     <div class="row max-vh-50">
       <div class="col bg-light d-flex flex-column">
         <div class="row flex-grow-1">
-          <div class="col">
+          <div class="col p-0">
+            <div>
+              <div class="d-flex justify-content-center align-items-center border-bottom">
+                <h4 class="p-1 fw-semibold">Toolbox</h4>
+              </div>
+              <div class="list-group list-group-flush scrollarea overflow-scroll" id="Toolbox"
+                style="max-height: 500px;">
 
+              </div>
+            </div>
           </div>
           <div class="col p-0 border-start">
             <div>
               <div class="d-flex justify-content-center align-items-center border-bottom">
                 <h4 class="p-1 fw-semibold">Timeline</h4>
               </div>
-              <div class="list-group list-group-flush scrollarea overflow-scroll" id="TimeLine" style="max-height: 500px;">
-   
-                
+              <div class="list-group list-group-flush scrollarea overflow-scroll" id="TimeLine"
+                style="max-height: 500px;">
+
               </div>
             </div>
           </div>
@@ -88,7 +152,7 @@
       <div class="col bg-light">
         <div class="row">
           <div class="col">
-            <input class="form-range" type="range" min="5" max="30" value="5" id="GridSizeSlider">
+
           </div>
           <div class="col p-2 bg-code">
             <code class="bg-code rounded p-2 overflow-auto" id="JsonPreview"></code>
@@ -97,8 +161,14 @@
       </div>
     </div>
 
-    <div class="row flex-grow-1">
-      <div class="col border-top"><span>kaas</span></div>
+    <div class="row bg-dark min-h-25 border-top">
+      <div class="mx-1">
+        <input class="form-range m-1" type="range" min="5" max="10000" value="5" id="TimelineScrollBar">
+
+      </div>
+    </div>
+    <div class="row flex-grow-1 border-top">
+      <div class="col"><span>kaas</span></div>
     </div>
 
     <div class="row">
